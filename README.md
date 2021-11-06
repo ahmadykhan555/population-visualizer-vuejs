@@ -1,4 +1,4 @@
-# population-visualizer
+# tutorial
 
 ## Project setup
 ```
