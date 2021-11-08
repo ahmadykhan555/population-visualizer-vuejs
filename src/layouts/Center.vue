@@ -1,10 +1,10 @@
 <template>
-  <div class="flex-1 h-full w-full flex-col flex">
-    <div class="h-80">
-      <map-component></map-component>
-    </div>
+  <div class="flex-1 h-full w-full flex-col flex ml-10">
     <div class="flex-1">
       <slot></slot>
+    </div>
+    <div class="h-3/6">
+      <map-component></map-component>
     </div>
   </div>
 </template>

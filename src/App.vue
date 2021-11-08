@@ -1,18 +1,40 @@
 <template>
   <div class="h-full box-border flex p-10 w-full">
-    <Aside>Aside</Aside>
-    <Center>Center</Center>
+    <Aside>
+      <countries-list :countries="populationData"> </countries-list>
+    </Aside>
+    <Center></Center>
   </div>
 </template>
 
 <script>
 import Aside from "./layouts/Aside.vue";
 import Center from "./layouts/Center.vue";
+import { fetchCountriesPopulationData } from "./helpers/populationApi";
+import { ref } from "@vue/reactivity";
+import CountriesList from "./components/CountriesList.vue";
 export default {
   name: "App",
   components: {
     Aside,
     Center,
+    CountriesList,
+  },
+
+  setup() {
+    const populationData = ref([]);
+
+    const fetchData = async () => {
+      console.log("Fetching countries data");
+      const _populationData = await fetchCountriesPopulationData();
+      populationData.value = _populationData.slice(46);
+      console.log({ populationData: populationData.value });
+    };
+    fetchData();
+
+    return {
+      populationData,
+    };
   },
 };
 </script>
@@ -31,5 +53,14 @@ export default {
 }
 body {
   font-size: 16px;
+}
+
+.mapboxgl-control-container {
+  display: none;
+}
+
+* ::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 </style>
