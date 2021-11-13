@@ -8,7 +8,9 @@
     }"
   >
     <div class="flex text-left px-4">
-      <p class="flex-1 font-bold">{{ country.index }} {{ country?.name }}</p>
+      <p class="flex-1 font-bold">
+        {{ country.index + 1 }} {{ country?.name }}
+      </p>
       <p
         class="py-1 px-2 rounded-lg text-xs bg-gray-300 box-border text-right"
         :style="{ width: '70px' }"
