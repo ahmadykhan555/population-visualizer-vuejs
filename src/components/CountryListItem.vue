@@ -23,6 +23,7 @@
 import { ref } from "@vue/reactivity";
 export default {
   props: ["country"],
+  emits: ["countryItemSelected"],
   setup(props, ctx) {
     const isSelected = ref(false);
 

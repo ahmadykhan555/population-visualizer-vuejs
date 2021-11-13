@@ -34,6 +34,7 @@ export default {
   components: {
     CountryListItem,
   },
+  emits: ["countryItemSelected"],
   props: {
     countries: {
       type: Array,
