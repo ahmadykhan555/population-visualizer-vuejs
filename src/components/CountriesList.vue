@@ -4,7 +4,7 @@
     <h3 class="font-bold uppercase">Population</h3>
   </div>
   <div v-if="selectedForComparison.length">
-    <h3>Selected</h3>
+    <h3 class="font-extrabold text-lg text-left px-2 mt-3">Selected</h3>
     <div class="overflow-y-auto max-h-80">
       <country-list-item
         @countryItemSelected="handleCountrySelected($event, false)"

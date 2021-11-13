@@ -41,9 +41,16 @@ export default {
     };
     fetchData();
 
-    const sanitizedAndSortedPopulationData = computed(() => {
-      console.log("computed sanitized");
+    const sortedAllCountriesData = computed(() => {
+      console.log("sorting all data");
       return populationData.value.sort(
+        (a, b) => b.latestPopulationCount - a.latestPopulationCount
+      );
+    });
+
+    const sortedSelectedCountriesData = computed(() => {
+      console.log("sorting selected ");
+      return selectedForComparison.value.sort(
         (a, b) => b.latestPopulationCount - a.latestPopulationCount
       );
     });
@@ -54,13 +61,11 @@ export default {
     };
 
     const moveCountryToSelected = (country) => {
-      debugger; // eslint-disable-line no-debugger
       selectedForComparison.value.push({ ...country });
       populationData.value.splice(country.index, 1);
     };
 
     const moveCountryToAll = (country) => {
-      debugger; // eslint-disable-line no-debugger
       const indexInSelected = selectedForComparison.value.findIndex(
         (v) => v.code === country.code
       );
@@ -71,8 +76,8 @@ export default {
     };
 
     return {
-      populationData: sanitizedAndSortedPopulationData,
-      selectedForComparison,
+      populationData: sortedAllCountriesData,
+      selectedForComparison: sortedSelectedCountriesData,
       handleCountrySelected,
     };
   },

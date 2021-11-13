@@ -13,7 +13,7 @@
       </p>
       <p
         class="py-1 px-2 rounded-lg text-xs bg-gray-300 box-border text-right"
-        :style="{ width: '70px' }"
+        :style="{ minWidth: '70px' }"
       >
         {{ country.latestPopulationCount }}
       </p>
