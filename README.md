@@ -1,24 +1,11 @@
-# tutorial
+#### Population Visualizer with Vue.Js
+This project is a pet project that explores the world of Vue 3 + composition API. The motivation behind this project is to explore whats new in Vue3 and how to build a real world project from sratch. 
 
-## Project setup
-```
-yarn install
-```
+#### Tech stack
+- Vue 3
+- Composition API
+- Tailwind css
+- Javascript
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
-
-### Compiles and minifies for production
-```
-yarn build
-```
-
-### Lints and fixes files
-```
-yarn lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### In action
+![Screenshot 2021-11-17 at 9 41 14 PM](https://user-images.githubusercontent.com/41294736/142279056-e2796c32-de74-4f69-b7cd-8152a45eddb9.png)
