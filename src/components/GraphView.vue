@@ -83,8 +83,8 @@ export default {
     onMounted(() => {
       Chart.register(...registerables);
       chart = createChart({
-        data: [1200, 1129, 375, 582, 12, 223],
-        labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+        data: [],
+        labels: [],
       });
     });
     return { selectedCountries, _selected };

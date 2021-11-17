@@ -3,9 +3,6 @@
     v-if="country"
     @click="handleCountryItemClick($event, 'alpha')"
     class="py-6 my-2 rounded-lg cursor-pointer bg-white"
-    :class="{
-      'bg-green-100  ': isSelected,
-    }"
   >
     <div class="flex text-left px-4">
       <p class="flex-1 font-bold">

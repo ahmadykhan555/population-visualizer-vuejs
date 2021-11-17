@@ -61,8 +61,10 @@ export default {
     };
 
     const moveCountryToSelected = (country) => {
-      selectedForComparison.value.push({ ...country });
-      populationData.value.splice(country.index, 1);
+      if (selectedForComparison.value.length < 5) {
+        selectedForComparison.value.push({ ...country });
+        populationData.value.splice(country.index, 1);
+      }
     };
 
     const moveCountryToAll = (country) => {

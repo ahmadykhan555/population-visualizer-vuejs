@@ -7,8 +7,9 @@ export const mapInit = (containerId) => {
     return null;
   }
 
-  return new mapbox.Map({
+  const map = new mapbox.Map({
     container: containerId,
     style: "mapbox://styles/mapbox/light-v10",
   });
+  return map;
 };

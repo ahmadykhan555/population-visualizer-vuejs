@@ -1,5 +1,5 @@
 <template>
-  <div class="h-full w-full border-box" id="map-conatiner"></div>
+  <div class="h-96 overflow-hidden w-full border-box" id="map-conatiner"></div>
 </template>
 
 <script>
