@@ -3,10 +3,11 @@
 </template>
 
 <script>
+import { onMounted } from "@vue/runtime-core";
 import { mapInit } from "../helpers/mapbox";
 export default {
-  mounted() {
-    mapInit("map-conatiner");
+  setup() {
+    onMounted(() => mapInit("map-conatiner"));
   },
 };
 </script>

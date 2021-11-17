@@ -18,6 +18,7 @@ import Center from "./layouts/Center.vue";
 import { fetchCountriesPopulationData } from "./helpers/populationApi";
 import { ref, computed } from "@vue/reactivity";
 import CountriesList from "./components/CountriesList.vue";
+import { provide } from "@vue/runtime-core";
 export default {
   name: "App",
   components: {
@@ -29,6 +30,8 @@ export default {
   setup() {
     const populationData = ref([]);
     const selectedForComparison = ref([]);
+    provide("selectedCountries", selectedForComparison);
+
     const fetchData = async () => {
       const _populationData = await fetchCountriesPopulationData();
       populationData.value = _populationData.slice(46).map((country) => ({
@@ -42,21 +45,18 @@ export default {
     fetchData();
 
     const sortedAllCountriesData = computed(() => {
-      console.log("sorting all data");
       return populationData.value.sort(
         (a, b) => b.latestPopulationCount - a.latestPopulationCount
       );
     });
 
     const sortedSelectedCountriesData = computed(() => {
-      console.log("sorting selected ");
       return selectedForComparison.value.sort(
         (a, b) => b.latestPopulationCount - a.latestPopulationCount
       );
     });
 
     const handleCountrySelected = ({ country, selected }) => {
-      console.log({ msg: "fromMian", country, selected });
       selected ? moveCountryToSelected(country) : moveCountryToAll(country);
     };
 

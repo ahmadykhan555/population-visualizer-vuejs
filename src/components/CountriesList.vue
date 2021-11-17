@@ -47,8 +47,6 @@ export default {
   },
   setup(_, ctx) {
     const handleCountrySelected = ({ country }, selected) => {
-      console.log({ country, ctx });
-      // console.log({ countryState, mybool });
       ctx.emit("countryItemSelected", { country, selected });
     };
     return { handleCountrySelected };

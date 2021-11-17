@@ -29,8 +29,7 @@ export default {
   setup(props, ctx) {
     const isSelected = ref(false);
 
-    const handleCountryItemClick = (event, extra) => {
-      console.log({ event, extra });
+    const handleCountryItemClick = () => {
       isSelected.value = !isSelected.value;
       ctx.emit("countryItemSelected", {
         selected: isSelected.value,
