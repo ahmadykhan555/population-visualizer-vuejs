@@ -24,7 +24,7 @@ export default {
       },
       { deep: true }
     );
-    const _selected = computed(() => {
+    const selected = computed(() => {
       return [...selectedCountries];
     });
 
@@ -60,6 +60,11 @@ export default {
         },
         options: {
           indexAxis: "y",
+          elements: {
+            bar: {
+              borderWidth: 1,
+            },
+          },
           scales: {
             y: {
               beginAtZero: true,
@@ -88,7 +93,7 @@ export default {
         labels: [],
       });
     });
-    return { selectedCountries, _selected };
+    return { selectedCountries, selected };
   },
 };
 </script>
