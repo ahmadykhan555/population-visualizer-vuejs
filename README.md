@@ -8,4 +8,4 @@ This project is a pet project that explores the world of Vue 3 + composition API
 - Javascript
 
 #### In action
-![Screenshot 2021-11-17 at 9 41 14 PM](https://user-images.githubusercontent.com/41294736/142279056-e2796c32-de74-4f69-b7cd-8152a45eddb9.png)
+<img width="1791" alt="Screenshot 2021-11-29 at 7 08 21 PM" src="https://user-images.githubusercontent.com/41294736/143920337-fbb143e5-0a6d-4cf9-b5eb-318fbd22f721.png">
